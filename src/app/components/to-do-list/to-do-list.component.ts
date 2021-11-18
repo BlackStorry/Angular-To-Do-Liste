@@ -19,4 +19,8 @@ export class ToDoListComponent implements OnInit {
   toggle(toDo: ToDo) {
     this.toDoDataService.toggelToDo(toDo);
   }
+  toDoNumber(){
+    return this.toDoDataService.unfinishedToDos();
+    
+  }
 }

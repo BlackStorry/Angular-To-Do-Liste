@@ -23,4 +23,14 @@ export class ToDoDataService {
     //     toDo.done = true;
     //   }
   }
+
+  unfinishedToDos() {
+    let cuonter: number = 0;
+    this.toDos.forEach((t) => {
+      if(t.done === false){
+        cuonter += 1;
+      }
+    });
+    return cuonter;
+  }
 }
